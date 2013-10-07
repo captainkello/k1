@@ -24,4 +24,12 @@ describe "StaticPages" do
       expect(page).to have_content('contact')
     end
   end
+
+  describe "/static_pages/about" do
+    it "should have the correct text" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      visit '/static_pages/about'
+      expect(page).to have_content('about')
+    end
+  end
 end
