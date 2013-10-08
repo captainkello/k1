@@ -3,32 +3,28 @@ require 'spec_helper'
 describe "StaticPages" do
   describe "/static_pages/home" do
     it "should have the correct text" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      expect(page).to have_content('home')
+      visit root_path
+      expect(page).to have_content('KupunaCare')
     end
   end
 
   describe "/static_pages/features" do
     it "should have the correct text" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/features'
+      visit features_path
       expect(page).to have_content('features')
     end
   end
 
   describe "/static_pages/contact" do
     it "should have the correct text" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/contact'
+      visit contact_path
       expect(page).to have_content('contact')
     end
   end
 
   describe "/static_pages/about" do
     it "should have the correct text" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/about'
+      visit about_path
       expect(page).to have_content('about')
     end
   end
