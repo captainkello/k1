@@ -1,4 +1,8 @@
 K1::Application.routes.draw do
+  root 'static_pages#home'
+
+  resources :users
+
   get "users/new"
   match 'home', to: 'static_pages#home', via: 'get'
   match 'contact', to: 'static_pages#contact', via: 'get'
@@ -9,8 +13,6 @@ K1::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
