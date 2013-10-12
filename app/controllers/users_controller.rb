@@ -25,4 +25,8 @@ class UsersController < ApplicationController
     	params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
+    def create_remember_token
+      # more 
+    end
+
 end
