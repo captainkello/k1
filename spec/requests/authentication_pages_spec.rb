@@ -38,7 +38,7 @@ describe "AuthenticationPages" do
 
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
-          it { should have_title('Sign in') }
+          # it { should have_title('Sign in') }
         end
 
         describe "submitting to the update action" do
